@@ -1,0 +1,59 @@
+import { Callout, Steps, Step } from "nextra-theme-docs";
+
+# Non-Contrastive Methods
+
+In the quest for more advanced AI systems, joint embedding predictive architectures (JEPAs) have emerged as a promising approach. While contrastive methods have been used in the past to train these architectures, **non-contrastive methods** are now preferred due to their efficiency and effectiveness.
+
+## Understanding Non-Contrastive Methods
+
+Non-contrastive methods aim to train JEPAs without the need for negative contrastive samples. In contrastive learning, the system is trained using pairs of inputs that are known to be different, pushing their representations away from each other. However, this process can be computationally expensive and may require a large number of contrastive samples.
+
+Non-contrastive methods, on the other hand, rely on other techniques to prevent the system from collapsing and learning trivial representations. These methods can be trained using only inputs that are known to be different views or transformations of the same thing.
+
+<Callout>
+Non-contrastive methods enable more efficient training of JEPAs by eliminating the need for negative contrastive samples.
+</Callout>
+
+## Types of Non-Contrastive Methods
+
+There are several types of non-contrastive methods used for training JEPAs, including:
+
+1. **Distillation-based methods**: These methods, such as [VICReg](/joint-embedding-architectures#vicreg) and [BYOL](/joint-embedding-architectures#byol), use a teacher-student framework to train the system. The teacher network generates target representations, which the student network learns to predict.
+
+2. **Regularization-based methods**: These methods, like [Barlow Twins](/joint-embedding-architectures#barlow-twins), employ regularization techniques to prevent the system from learning trivial representations. By minimizing the redundancy between different components of the representation, these methods encourage the system to capture meaningful information.
+
+## Advantages of Non-Contrastive Methods
+
+Non-contrastive methods offer several advantages over contrastive methods:
+
+- **Improved efficiency**: By eliminating the need for negative contrastive samples, non-contrastive methods can be trained more efficiently, requiring less computational resources.
+
+- **Simplified training**: Non-contrastive methods simplify the training process by focusing on learning meaningful representations from positive samples only.
+
+- **Scalability**: As non-contrastive methods do not rely on negative samples, they can be easily scaled to larger datasets and more complex architectures.
+
+## Applying Non-Contrastive Methods to JEPAs
+
+To apply non-contrastive methods to JEPAs, follow these steps:
+
+<Steps>
+
+### Step 1: Select a non-contrastive method
+
+Choose a non-contrastive method that suits your specific task and architecture. Consider factors such as the type of data, computational resources, and desired performance.
+
+### Step 2: Prepare the training data
+
+Prepare a dataset consisting of different views or transformations of the same input. These views can be obtained through data augmentation techniques, such as cropping, flipping, or color jittering.
+
+### Step 3: Train the JEPA
+
+Train the JEPA using the selected non-contrastive method. The system will learn to predict the representation of one view from another view of the same input, without the need for negative contrastive samples.
+
+### Step 4: Evaluate and fine-tune
+
+Evaluate the performance of the trained JEPA on a validation set. Fine-tune the hyperparameters and architecture if necessary to achieve the desired performance.
+
+</Steps>
+
+By leveraging non-contrastive methods, researchers can develop more efficient and effective JEPAs, paving the way for advanced AI systems capable of [learning hierarchical representations](/reasoning-planning-hierarchical-representations#learning-hierarchical-representations) and [building world models from video data](/joint-embedding-architectures#world-models-from-video).

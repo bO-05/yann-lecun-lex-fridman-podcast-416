@@ -1,0 +1,55 @@
+import { Callout, Steps, Step } from "nextra-theme-docs";
+
+# World Models from Video
+
+Building world models from video data is a crucial step towards more intelligent AI systems. Yann LeCun, Chief AI Scientist at Meta, has been working on this idea for the past decade, and his team has made significant progress in the last two to three years.
+
+The goal is to train a system to learn good representations of the world by observing video data. This is a challenging task because the world is incredibly complex and rich in information compared to text data. LeCun and his team have tried various approaches, including:
+
+- Generative models that predict pixels
+- Variational autoencoders (VAEs)
+- Generative adversarial networks (GANs)
+
+However, these methods have failed to learn good representations of images and videos.
+
+## The Breakthrough: Joint Embedding Predictive Architectures (JEPAs)
+
+The breakthrough came with the development of joint embedding predictive architectures (JEPAs). In a JEPA, the system learns to predict the representation of a complete input (e.g., an image or video) from a corrupted or transformed version of the input.
+
+<Steps>
+
+### Step 1: Encode the complete input and the corrupted input
+
+Run both the complete input and the corrupted or transformed version through encoders, which can be identical or slightly different.
+
+### Step 2: Train a predictor
+
+Train a predictor to predict the representation of the complete input from the representation of the corrupted input.
+
+### Step 3: Optimize the system
+
+Use non-contrastive methods, such as regularizers, to prevent the system from collapsing and ensure that it learns meaningful representations.
+
+</Steps>
+
+The key difference between JEPAs and generative models is that JEPAs learn to predict in the abstract representation space rather than reconstructing the input pixels. This allows the system to capture the essential information while discarding irrelevant details.
+
+## Recent Progress: Video JEPAs (V-JEPAs)
+
+LeCun's team has recently developed Video JEPAs (V-JEPAs), which apply the JEPA principles to video data. In a V-JEPA, the system learns to predict the representation of a complete video from a partially masked version of the video.
+
+<Callout emoji="💡">
+V-JEPAs have shown promising results in learning good representations of video data. For the first time, the learned representations can be used to train a supervised classifier to recognize actions in videos with high accuracy.
+</Callout>
+
+Moreover, preliminary results suggest that V-JEPAs can capture physical constraints and detect impossible events in videos, such as objects disappearing or changing shape.
+
+## The Path Forward
+
+LeCun believes that world models learned from video data, combined with [reasoning, planning, and hierarchical representations](/reasoning-planning-hierarchical-representations), will be essential components of future intelligent systems. However, there are still many challenges to overcome, such as:
+
+- Scaling up the systems to handle larger and more diverse datasets
+- Integrating world models with other AI components, such as natural language processing and robotics
+- Developing more efficient training methods and architectures
+
+Despite these challenges, LeCun is optimistic about the future of AI and believes that significant progress will be made in the coming years. By focusing on learning world models from video data, AI researchers can take an important step towards building truly intelligent systems that can understand and interact with the world in meaningful ways.

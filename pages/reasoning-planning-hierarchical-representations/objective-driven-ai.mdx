@@ -1,0 +1,51 @@
+import { Callout, Steps, Step } from "nextra-theme-docs";
+
+# Objective-Driven AI
+
+In the quest for more advanced AI systems that can reason and plan effectively, [Yann LeCun](/) advocates for objective-driven AI architectures. These architectures differ from traditional autoregressive language models (LLMs) by focusing on optimizing an objective function rather than simply predicting the next token in a sequence.
+
+## How Objective-Driven AI Works
+
+The core idea behind objective-driven AI is to have a system that:
+
+1. Takes an input (prompt) and generates a representation of the answer
+2. Optimizes the answer representation to minimize an objective function
+3. Translates the optimized answer representation into human-readable text
+
+This process allows the AI system to "think" about its answer before producing it, similar to how humans plan their responses before speaking or writing.
+
+<Steps>
+
+### Step 1: Generating Answer Representation
+
+The AI system takes a prompt (question or input) and generates an abstract representation of the answer. This representation is not tied to any specific language, allowing the system to think in a more general, language-agnostic manner.
+
+### Step 2: Optimizing Answer Representation
+
+The system then optimizes the answer representation by minimizing an objective function. The objective function measures how well the answer fits the question and can include various constraints or preferences (e.g., factual accuracy, coherence, safety).
+
+This optimization process is typically performed using gradient descent in a continuous space, making it more efficient than the discrete optimization used in autoregressive LLMs.
+
+### Step 3: Translating to Human-Readable Text
+
+Once the answer representation is optimized, it is translated into human-readable text using a language-specific decoder. This final step allows the AI system to communicate its "thoughts" in a way that humans can understand.
+
+</Steps>
+
+## Advantages of Objective-Driven AI
+
+Compared to autoregressive LLMs, objective-driven AI architectures offer several advantages:
+
+- **Reasoning and planning**: By optimizing an answer representation based on an objective function, these systems can exhibit a form of reasoning and planning that is absent in LLMs.
+- **Language-agnostic thinking**: The abstract answer representation allows the system to "think" independently of the language used for input or output, potentially leading to more general intelligence.
+- **Efficient optimization**: Gradient-based optimization in a continuous space is more efficient than the discrete optimization used in LLMs, allowing for more complex reasoning with fewer computational resources.
+
+## Challenges and Future Directions
+
+While objective-driven AI is a promising approach, there are still several challenges to overcome:
+
+- **Defining objective functions**: Crafting objective functions that accurately capture the desired behavior of the AI system is a non-trivial task and may require significant trial and error.
+- **Scaling to complex tasks**: As the complexity of the task increases, the optimization process may become more difficult or time-consuming, requiring new techniques or architectures.
+- **Integration with other AI components**: To build truly intelligent systems, objective-driven AI will need to be integrated with other components, such as [world models](/joint-embedding-architectures/world-models-from-video), [hierarchical planning](/reasoning-planning-hierarchical-representations/learning-hierarchical-representations), and [multi-modal input processing](/limitations-of-llms/importance-of-sensory-input).
+
+Despite these challenges, objective-driven AI represents an exciting direction for AI research and development, offering the potential for more advanced, reasoning-capable AI systems that can work alongside humans to solve complex problems.

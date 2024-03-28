@@ -1,0 +1,32 @@
+{
+  "dependencies": {
+    "@types/node": "^20.11.30",
+    "next": "^14.1.4",
+    "nextra": "^2.13.4",
+    "nextra-theme-docs": "^2.13.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.4.3"
+  },
+  "name": "Yann-with-lumentis",
+  "description": "Yann Lecun visits Lex Fridman podcast. Yann LeCun is the Chief AI Scientist at Meta, professor at NYU, Turing Award winner, and one of the most influential researchers in the history of AI. ",
+  "version": "0.0.1",
+  "scripts": {
+    "devstart": "next dev -p 5656 & node start.js",
+    "dev": "next dev -p 5656",
+    "build": "next build",
+    "start": "next start"
+  },
+  "keywords": [
+    "Artificial Intelligence",
+    "Machine Learning",
+    "Open Source AI",
+    "Yann LeCun",
+    "Meta AI",
+    "Generative Models",
+    "Joint Embedding Architectures",
+    "Hierarchical Planning",
+    "Robotics",
+    "Regulation of AI"
+  ]
+}
